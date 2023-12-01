@@ -1,14 +1,13 @@
 package fr.efrei.domain;
 import java.util.*;
-import fr.efrei.domain.Book;
 
-public class Bookshop {
+public class BookShop {
         private Map<Book, Integer> bookInStock;
 
-        private Bookshop() {
+        private BookShop() {
         }
 
-        public Bookshop(Builder builder) {
+        public BookShop(Builder builder) {
             this.bookInStock = builder.bookInStock;
         }
 
@@ -29,8 +28,8 @@ public class Bookshop {
                 this.bookInStock = bookInStock;
                 return this;
             }
-            public Bookshop build() {
-                return new Bookshop(this);
+            public BookShop build() {
+                return new BookShop(this);
             }
         }
     }
