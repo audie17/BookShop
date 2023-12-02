@@ -1,10 +1,10 @@
 package fr.efrei.factory;
 
 import fr.efrei.domain.*;
-import java.util.Map;
+import java.util.List;
 
 public class BookShopFactory {
-    public static BookShop createBookShop(Map<Book, Integer> bookInStock) {
+    public static BookShop createBookShop(List<Book> bookInStock) {
         if (bookInStock == null) {
             return null;
         }
