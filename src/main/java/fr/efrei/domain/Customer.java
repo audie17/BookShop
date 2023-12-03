@@ -47,7 +47,7 @@ public class Customer {
             private int cus_id;
             private String name;
             private String surname;
-            private int pointNumber;
+            private int pointNumber =0;
 
             public Builder setCus_id(int cus_id) {
                 this.cus_id = cus_id;
