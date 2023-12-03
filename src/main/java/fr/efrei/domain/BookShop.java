@@ -2,7 +2,7 @@ package fr.efrei.domain;
 import java.util.*;
 
 public class BookShop {
-        private Map<Book, Integer> bookInStock;
+        private List<Book> bookInStock ;
 
         private BookShop() {
         }
@@ -11,7 +11,7 @@ public class BookShop {
             this.bookInStock = builder.bookInStock;
         }
 
-        public Map<Book, Integer> getBookInStock() {
+        public List<Book> getBookInStock() {
             return bookInStock;
         }
 
@@ -22,9 +22,9 @@ public class BookShop {
                     '}';
         }
         public static class Builder {
-            private Map<Book, Integer> bookInStock;
+            private List<Book> bookInStock;
 
-            public Builder setBookInStock(Map<Book, Integer> bookInStock) {
+            public Builder setBookInStock(List<Book> bookInStock) {
                 this.bookInStock = bookInStock;
                 return this;
             }
