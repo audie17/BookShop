@@ -3,12 +3,20 @@ import java.util.List;
 import fr.efrei.domain.Book;
 
 public class ShoppingCart {
-        private List<Book> books;
+    private int shoppingCart_id;
+    private List<Book> books;
+    private ShoppingCart() {
+    }
 
-        private ShoppingCart() {
-        }
+    public int getShoppingCart_id() {
+        return shoppingCart_id;
+    }
 
-        public ShoppingCart(Builder builder) {
+    public List<Book> getBooks() {
+        return books;
+    }
+
+    public ShoppingCart(Builder builder) {
             this.books = builder.books;
         }
 
@@ -22,7 +30,12 @@ public class ShoppingCart {
 
 
         public static class Builder {
+            private int shoppingCart_id;
             private List<Book> books;
+
+            public void setShoppingCart_id(int shoppingCart_id) {
+                this.shoppingCart_id = shoppingCart_id;
+            }
 
             public Builder setBooks(List<Book> books) {
                 this.books = books;
