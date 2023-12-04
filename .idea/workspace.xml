@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8865d406-2c7a-47c7-bd6e-fd0afcf59f44" name="Changes" comment="other factories" />
+    <list default="true" id="8865d406-2c7a-47c7-bd6e-fd0afcf59f44" name="Changes" comment="remove unnecessary files + correct main">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,12 +23,47 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectId" id="2Z5OoSVzXeXKa8xBnAy9LGcAWAm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "last_opened_file_path": "C:/Users/charl/BookShop"
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/charl/BookShop",
+    "settings.editor.selected.configurable": "settings.sync"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fr.efrei.Main" />
+      <module name="BookShop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.efrei.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="BookFactory + Helper">
       <created>1701459188433</created>
@@ -41,12 +79,46 @@
       <option name="project" value="LOCAL" />
       <updated>1701460141154</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="other files">
+      <created>1701642645874</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701642645875</updated>
+    </task>
+    <task id="LOCAL-00004" summary="remove unnecessary files + correct main">
+      <created>1701643037523</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701643037523</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8865d406-2c7a-47c7-bd6e-fd0afcf59f44" name="Changes" comment="remove unnecessary files + correct main" />
+      <created>1701708652056</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701708652056</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="BookFactory + Helper" />
     <MESSAGE value="other factories" />
-    <option name="LAST_COMMIT_MESSAGE" value="other factories" />
+    <MESSAGE value="other files" />
+    <MESSAGE value="remove unnecessary files + correct main" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove unnecessary files + correct main" />
   </component>
 </project>
