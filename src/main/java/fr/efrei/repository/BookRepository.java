@@ -60,22 +60,5 @@ public class BookRepository implements IBookRepository {
     public List<Book> getAll() {
         return new ArrayList<>(bookDB);
     }
-
-   @Override
-   public void displayBookInfo(Book book) {
-       if (book == null) {
-           System.out.println("No books available.");
-       } else {
-           System.out.println("Book Information:\n");
-           System.out.println("Title: " + book.getTitle());
-           System.out.println("Author: " + book.getAuthor());
-           System.out.println("ISBN: " + book.getIsbn());
-           System.out.println("Quantity: " + book.getQuantityAvailable());
-           System.out.println("Price: " +book.getPrice());
-           System.out.println("Genre"+book.getGenre());
-           System.out.println("-------------");
-
-       }
-   }
-
 }
+

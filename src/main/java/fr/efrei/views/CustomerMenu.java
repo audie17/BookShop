@@ -137,6 +137,7 @@ public class CustomerMenu {
 
     private void displayCustomerInfo(Customer customer) {
         System.out.println("Customer ID: " + customer.getCus_id());
+        System.out.println("Surname: " + customer.getSurname());
         System.out.println("Name: " + customer.getName());
 
     }
