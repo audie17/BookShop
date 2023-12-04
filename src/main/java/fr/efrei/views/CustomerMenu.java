@@ -26,7 +26,7 @@ public class CustomerMenu {
 
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
-            scanner.nextLine();
+            scanner.nextLine(); // Consume the newline character
 
             switch (choice) {
                 case 1:
@@ -64,6 +64,7 @@ public class CustomerMenu {
 
         System.out.print("Customer ID: ");
         int customerId = scanner.nextInt();
+        scanner.nextLine(); // Consume the newline character
 
         System.out.print("Name: ");
         String name = scanner.nextLine();
@@ -71,14 +72,12 @@ public class CustomerMenu {
         System.out.print("Surname: ");
         String surname = scanner.nextLine();
 
-
         Customer newCustomer = new Customer.Builder()
                 .setCus_id(customerId)
                 .setName(name)
                 .setSurname(surname)
-                .setPointNumber(100) //faire une fonction calculer point
+                .setPointNumber(100) // You might want to replace this with a function to calculate points
                 .build();
-
 
         customerRepository.create(newCustomer);
 
@@ -90,7 +89,6 @@ public class CustomerMenu {
 
         System.out.print("Enter customer ID to remove: ");
         int customerId = scanner.nextInt();
-
 
         boolean removed = customerRepository.delete(customerId);
 
@@ -106,7 +104,6 @@ public class CustomerMenu {
 
         System.out.print("Enter customer name to search: ");
         String customerName = scanner.nextLine();
-
 
         Customer foundCustomer = customerRepository.searchCustomerbyName(customerName);
 
@@ -127,7 +124,6 @@ public class CustomerMenu {
         Customer customer = customerRepository.read(customerId);
 
         if (customer != null) {
-
             float points = customerRepository.calculateTotalPoint(customer);
             System.out.println("Total Fidelity Points: " + points);
         } else {
@@ -135,10 +131,27 @@ public class CustomerMenu {
         }
     }
 
+    // Assuming cusDB is your list of customers
+    public Customer searchCustomerbyName(String customerName) {
+        if (customerRepository == null) {
+            throw new IllegalStateException("Customer repository is not initialized.");
+        }
+
+        // Assuming your CustomerRepository has a getAll() method
+        return customerRepository.getAll().stream()
+                .filter(customer -> customer.getName().equalsIgnoreCase(customerName))
+                .findAny()
+                .orElse(null);
+    }
+
+    public float calculateTotalPoint(Customer customer) {
+
+        return customer.getPointNumber();
+    }
+
     private void displayCustomerInfo(Customer customer) {
         System.out.println("Customer ID: " + customer.getCus_id());
         System.out.println("Surname: " + customer.getSurname());
         System.out.println("Name: " + customer.getName());
-
     }
 }

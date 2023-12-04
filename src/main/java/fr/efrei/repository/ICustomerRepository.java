@@ -1,13 +1,11 @@
 package fr.efrei.repository;
 
 import fr.efrei.domain.Customer;
+import fr.efrei.domain.ShoppingCart;
 
 import java.util.List;
 
 public interface ICustomerRepository {
-    Customer searchCustomerbyName(String customerName);
-
-    float calculateTotalPoint(Customer customer);
 
     Customer create(Customer customer);
 
@@ -18,4 +16,6 @@ public interface ICustomerRepository {
     boolean delete(int cusCode);
 
     List<Customer> getAll();
+
+    float calculatePoints(Customer customer, ShoppingCart shoppingCart);
 }

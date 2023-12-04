@@ -5,7 +5,7 @@ public class Customer {
         private int cus_id;
         private String name;
         private String surname;
-        private int pointNumber;
+        private float pointNumber;
 
         private Customer() {
         }
@@ -29,7 +29,7 @@ public class Customer {
             return surname;
         }
 
-        public int getPointNumber() {
+        public float getPointNumber() {
             return pointNumber;
         }
 
@@ -47,7 +47,7 @@ public class Customer {
             private int cus_id;
             private String name;
             private String surname;
-            private int pointNumber =0;
+            private float pointNumber =0;
 
             public Builder setCus_id(int cus_id) {
                 this.cus_id = cus_id;
@@ -64,7 +64,7 @@ public class Customer {
                 return this;
             }
 
-            public Builder setPointNumber(int pointNumber) {
+            public Builder setPointNumber(float pointNumber) {
                 this.pointNumber = pointNumber;
                 return this;
             }

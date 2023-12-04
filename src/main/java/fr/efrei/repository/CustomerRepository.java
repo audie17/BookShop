@@ -1,6 +1,6 @@
 package fr.efrei.repository;
 
-import fr.efrei.domain.Customer;
+import fr.efrei.domain.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,28 +18,6 @@ public class CustomerRepository implements ICustomerRepository {
             repository = new CustomerRepository();
         }
         return repository;
-    }
-
-    @Override
-    public Customer searchCustomerbyName(String customerName) {
-        if (cusDB == null) {
-            throw new IllegalStateException("Customer database is not initialized.");
-        }
-
-        // Assuming your Customer class has a getName() method
-        return cusDB.stream()
-                .filter(customer -> customer.getName().equalsIgnoreCase(customerName))
-                .findAny()
-                .orElse(null);
-    }
-
-    @Override
-    public float calculateTotalPoint(Customer customer) {
-        if (customer == null) {
-            throw new IllegalArgumentException("Invalid customer. Cannot calculate total points.");
-        }
-
-        return customer.getPointNumber();
     }
 
     @Override
@@ -93,4 +71,32 @@ public class CustomerRepository implements ICustomerRepository {
     public List<Customer> getAll() {
         return new ArrayList<>(cusDB);
     }
+
+    @Override
+    public float calculatePoints(Customer customer, ShoppingCart shoppingCart) {
+        float POINTS_PER_DOLLAR = 1;
+        if (customer == null || shoppingCart == null) {
+            throw new IllegalArgumentException("Invalid customer or shopping cart.");
+        }
+
+        List<Book> booksInCart = shoppingCart.getBooks();
+        float totalPrice = booksInCart.stream()
+                .map(Book::getPrice)
+                .reduce(0.0f, Float::sum);
+
+        float pointsEarned = totalPrice * POINTS_PER_DOLLAR;
+        Customer updatedCustomer = new Customer.Builder()
+                .setCus_id(customer.getCus_id())
+                .setName(customer.getName())
+                .setSurname(customer.getSurname())
+                .setPointNumber(customer.getPointNumber() + pointsEarned)
+                .build();
+
+
+        update(updatedCustomer);
+
+        return pointsEarned;
+    }
+
+
 }
