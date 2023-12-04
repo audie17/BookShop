@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 package fr.efrei.repository;
 
+=======
+>>>>>>> origin/master
 import fr.efrei.domain.ShoppingCart;
 
 import java.util.ArrayList;
@@ -87,5 +90,9 @@ public class ShoppingCartRepository implements IShoppingCartRepository{
     public boolean delete(Object o) {
         return false;
     }*/
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> origin/master
